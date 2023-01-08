@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import Icon from 'react-crud-icons';
+
+import 'react-crud-icons/dist/css/react-crud-icons.css';
 
 import Button from './components/Button';
 import Form from './components/Form';
@@ -42,8 +45,12 @@ function ListaTarefas() {
         <div className='card titulo' id='list1'>
           <div className='card-body py-4 px-4 px-md-5'>
             <p className='h1 text-center mt-3 mb-4 pb-3 text-primary'>
-              <i className='fas fa-check-square me-1'></i>
-              <u>Lista de Tarefas do Feitosa</u>
+            <Icon
+              name='import'
+              theme='light'
+              size='big'
+            />
+              Lista de Tarefas do Feitosa
             </p>
           <Form onSubmit={adicionaTarefa}>
           <div className='pb-2'>
