@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Tarefa 4 da disciplina de desenvolvimento Front-End com React
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
