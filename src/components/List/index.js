@@ -8,17 +8,18 @@ function formatar(item){
     return 'lead fw-normal mb-0 bg-success w-100 ps-2 pe-2 py-2 text-light rounded';
 }
 
-function salvar(caixaEdicao, textoEdicao, caixaExclusao){
+function salvar(caixaEdicao, textoEdicao, caixaExclusao, novoValor){
     let cx = document.getElementById(caixaEdicao);
     let tx = document.getElementById(textoEdicao);
     let cd = document.getElementById(caixaExclusao);
-    tx.value = cx.value;
+    let nw = document.getElementById(novoValor);
+    tx.innerHTML = nw.value;
     cx.style.display='none';
     tx.style.display='block';
     cd.style.display='block';
 }
 
-function fechar(caixaEdicao, textoEdicao, caixaExclusao){
+function cancelar(caixaEdicao, textoEdicao, caixaExclusao){
     let cx = document.getElementById(caixaEdicao);
     let tx = document.getElementById(textoEdicao);
     let cd = document.getElementById(caixaExclusao);
@@ -63,9 +64,9 @@ function List(props) {
                 <div className='flex-row align-items-center'>
                     <input id={'txtNovoValor'+index} type='text' class="form-control form-control-lg" />
                     <div>
-                        <IconBtn name='save' tooltip='Salvar' onClick={()=>{salvar('cxEditar'+index,'lblEditar'+index,'cxExcluir'+index)}}>
+                        <IconBtn name='save' tooltip='Salvar' onClick={()=>{salvar('cxEditar'+index,'lblEditar'+index,'cxExcluir'+index, 'txtNovoValor'+index)}}>
                         </IconBtn>
-                        <IconBtn name='close' tooltip='Cancelar' onClick={()=>{fechar('cxEditar'+index,'lblEditar'+index,'cxExcluir'+index)}}>
+                        <IconBtn name='close' tooltip='Cancelar' onClick={()=>{cancelar('cxEditar'+index,'lblEditar'+index,'cxExcluir'+index)}}>
                         </IconBtn>
                     </div>
                 </div>
